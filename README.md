@@ -1,6 +1,6 @@
-# stract
+# Stract
 
-Stract is an object-oriented data system for building models of normal python objects and defining classes at run-time. Stract highlights a particular programming methodology in which there are two main data structures called models and templates. Models are representations of objects that can be converted into dictionaries. Templates are schemas that are used to create new models. Models are to templates as objects are to classes. Unlike classes, however, a template can be defined at run-time.
+Stract is an object-oriented data system for building representations of python objects and classes at run-time. Stract highlights a particular methodology in which there are two main data structures called models and templates. Models are representations of objects that can be converted into dictionaries, and templates are schemas that are used to create new models. Models are to templates as objects are to classes in typical object-oriented programming, however a template in Stract can be defined at run-time.
 
 Models allow information to be passed around to different subsystems in a program. In game development, for example, a player model would be distinct from the player class, which deals with controls, movement, and display, dealing more with the data regarding player state like position and health. Enemies loaded into the game can use the player model update their behavior trees without having direct access to the player instance directly.
 
