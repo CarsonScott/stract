@@ -1,8 +1,38 @@
-from settheory import intersection, compliment, union, difference
 from configparser import ConfigParser
 from copy import copy
 import inspect
 import parser
+
+def union(A, B):
+    Y = []
+    for x in A+B:
+        if x not in Y:
+            Y.append(x)
+    return Y
+
+def intersection(A, B):
+    Y = []
+    for a in A:
+        if a in B:
+            Y.append(a)
+    return Y
+
+def compliment(A, B):
+    Y = []
+    for b in B:
+        if b not in A:
+            Y.append(b)
+    return Y
+
+def difference(A, B):
+    Y = []
+    for a in A:
+        if a not in B:
+            Y.append(a)
+    for b in B:
+        if b not in A:
+            Y.append(b)
+    return Y
 
 def get_attributes(A):
 	try:return vars(A)
